@@ -141,7 +141,7 @@ let
 
   candidatedelays = collect(0.0:0.05:10)
 
-  P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = OU)
+  P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = matern32)
 
   figure(); title("marginals")
   plot(candidatedelays, vec(sum(P,dims=[2;3])))
