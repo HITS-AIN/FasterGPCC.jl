@@ -6,7 +6,7 @@ module FasterGPCC
 
     using Memoization, ThreadSafeDicts
 
-    import GPCC: gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
+    import GPCC: rbf, OU, matern32, matern52, gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
 
     # Following line makes ProgressMeter work with tmap1
 
@@ -17,6 +17,6 @@ module FasterGPCC
     export posteriordelay
 
     # re-export GPCC
-    export gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
+    export rbf, OU, matern32, matern53, gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
 
 end
