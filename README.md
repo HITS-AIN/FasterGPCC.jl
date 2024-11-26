@@ -106,7 +106,7 @@ In the following script, we estimate the delays for a number of objects where tw
 The real data are provided in the package [GPCCData.jl](https://github.com/HITS-AIN/GPCCData.jl).
 After stating Julia with multiple threads, we execute the following script:
 ```
-using GPCC, LinearAlgebra, ThreadPinning
+using GPCC, FasterGPCC, LinearAlgebra, ThreadPinning
 BLAS.set_num_threads(1)
 pinthreads(:cores)
 
