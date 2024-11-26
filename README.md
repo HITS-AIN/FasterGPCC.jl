@@ -51,7 +51,7 @@ Unless you are using the Intel MKL, we recommend to always use the above code be
 Start Julia with multiple threads.
 We simulate some data:
 ```
-using GPCC, FasterGPCC, LinearAlgebra, ThreadPinning
+using FasterGPCC, LinearAlgebra, ThreadPinning
 BLAS.set_num_threads(1)
 pinthreads(:cores) 
 
@@ -79,7 +79,7 @@ plot(candidatedelays, P)
 
 We show how the above estimation of the posterior delay can be performed for three lightcurves:
 ```
-using GPCC, FasterGPCC, LinearAlgebra, ThreadPinning
+using FasterGPCC, LinearAlgebra, ThreadPinning
 BLAS.set_num_threads(1)
 pinthreads(:cores) 
 
@@ -108,7 +108,7 @@ In the following script, we estimate the delays for a number of objects where tw
 The real data are provided in the package [GPCCData.jl](https://github.com/HITS-AIN/GPCCData.jl).
 After stating Julia with multiple threads, we execute the following script:
 ```
-using GPCC, FasterGPCC, LinearAlgebra, ThreadPinning
+using FasterGPCC, LinearAlgebra, ThreadPinning
 BLAS.set_num_threads(1)
 pinthreads(:cores)
 
