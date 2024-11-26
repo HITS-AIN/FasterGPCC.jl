@@ -252,9 +252,9 @@ uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
 
 [[deps.GPCC]]
 deps = ["Distances", "Distributions", "ForwardDiff", "LinearAlgebra", "Memoization", "MiscUtil", "Optim", "Printf", "ProgressMeter", "Random", "StatsFuns", "ThreadSafeDicts", "ThreadTools"]
-git-tree-sha1 = "2e0f26ef807ba13de14621d1b90f70f42f9b45b6"
+git-tree-sha1 = "c3663eac509b8b825f7b1ada7377da24d275da8a"
 uuid = "4498ab02-56af-48f6-b5af-4c1c07c71523"
-version = "0.2.2"
+version = "0.2.5"
 
 [[deps.HypergeometricFunctions]]
 deps = ["LinearAlgebra", "OpenLibm_jll", "SpecialFunctions"]
