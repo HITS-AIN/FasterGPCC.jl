@@ -22,7 +22,7 @@ add FasterGPCC
 
 The package exports the methods `posteriordelay`.
 
-It also re-exports the [GPCC](https://github.com/HITS-AIN/GPCC.jl) methods `simulatetwolightcurves`, `simulatethreelightcurves`, `infercommonlengthscale`, `gpcc` and `uniformpriordelay`.
+It also re-exports the [GPCC](https://github.com/HITS-AIN/GPCC.jl) methods `rbf`,`OU`,`matern32`,`matern52`,`simulatetwolightcurves`, `simulatethreelightcurves`, `infercommonlengthscale`, `gpcc` and `uniformpriordelay`.
 
 ## 🚀 An important note about performance
 
