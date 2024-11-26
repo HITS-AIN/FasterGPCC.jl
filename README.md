@@ -131,4 +131,24 @@ for i in 1:5
        figure(); title(listdatasets()[i])
        plot(candidatedelays, P)
 end
+
+
+let
+  idx = [3, 1, 2] #  correspond to wavelengths 9100, 5100, 7700
+
+  tobs, yobs, σobs, lambda, = readdataset(source = "Mgc0811")
+  tobs, yobs, σobs = tobs[idx], yobs[idx], σobs[idx]
+
+  candidatedelays = collect(0.0:0.05:10)
+
+  P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = OU)
+
+  figure(); title("marginals")
+  plot(candidatedelays, vec(sum(P,dims=[2;3])))
+  plot(candidatedelays, vec(sum(P,dims=[1;3])))
+  
+  figure(); title("joint distribution")
+  pcolor(candidatedelays, candidatedelays, P)
+
+end
 ```
