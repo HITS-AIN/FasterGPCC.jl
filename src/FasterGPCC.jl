@@ -1,6 +1,6 @@
 module FasterGPCC
 
-    using GPCC
+    using GPCC, Random
 
     using ProgressMeter, ThreadTools, Printf
 
@@ -11,5 +11,7 @@ module FasterGPCC
     ProgressMeter.ncalls(::typeof(tmap1), ::Function, args...) = ProgressMeter.ncalls_map(args...)
 
     include("posteriordelay.jl")
+
+    export posteriordelay
 
 end
