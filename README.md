@@ -20,6 +20,7 @@ Apart from cloning, an easy way of using the package is the following:
 add FasterGPCC
 ```
 
+The package exports the methods `posteriordelay`. It also re-exports the methods `simulatetwolightcurves`, `simulatethreelightcurves`, `infercommonlengthscale`, `gpcc` and `uniformpriordelay`.
 
 ## 🚀 An important note about performance
 
