@@ -1,7 +1,7 @@
 name = "FasterGPCC"
 uuid = "c5c4b0dc-c31b-4b94-9b5f-f5662dec8886"
 authors = ["Nikos Gianniotis <ngiann@gmail.com> and contributors"]
-version = "0.0.1"
+version = "0.0.2"
 
 [deps]
 GPCC = "4498ab02-56af-48f6-b5af-4c1c07c71523"

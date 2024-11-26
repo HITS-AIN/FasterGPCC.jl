@@ -1,10 +1,12 @@
 module FasterGPCC
 
-    using GPCC, Random
+    using Random
 
     using ProgressMeter, ThreadTools, Printf
 
     using Memoization, ThreadSafeDicts
+
+    import GPCC: gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
 
     # Following line makes ProgressMeter work with tmap1
 
@@ -13,5 +15,8 @@ module FasterGPCC
     include("posteriordelay.jl")
 
     export posteriordelay
+
+    # re-export GPCC
+    export gpcc, infercommonlengthscale, getprobabilities, simulatetwolightcurves, simulatethreelightcurves, uniformpriordelay
 
 end
