@@ -65,7 +65,7 @@ candidatedelays = LinRange(0.0, 10.0, 100)
 
 Having generated the simulated data, we will now estimate the delays. To that end we use the function `posteriordelay`:
 ```
- P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = GPCC.rbf, iterations = 1000)
+ P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = rbf, iterations = 1000)
 ```
 
 The returned `P` contains the probability of each candidate delay. We can plot the result with:
@@ -86,7 +86,7 @@ pinthreads(:cores)
 tobs, yobs, σobs, truedelays = simulatethreelightcurves()
 
 candidatedelays = LinRange(0.0, 6.0, 100)
-P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = GPCC.rbf, iterations = 1000)
+P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = rbf, iterations = 1000)
 
 size(P) # P is now a matrix, above it was a vector
 
@@ -119,7 +119,7 @@ let # WARMUP - Julia precompiles code
 
   tobs, yobs, σobs, truedelays = simulatetwolightcurves()
   candidatedelays = LinRange(0.0,4.0,3)
-  posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = GPCC.rbf);
+  posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = OU);
 
 end
 
@@ -127,7 +127,7 @@ candidatedelays = collect(0.0:0.1:60.0)
 
 for i in 1:5
        tobs, yobs, σobs, lambda, = readdataset(source = listdatasets()[i])
-       P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = GPCC.OU)
+       P = posteriordelay(tobs, yobs, σobs, candidatedelays; kernel = OU)
        figure(); title(listdatasets()[i])
        plot(candidatedelays, P)
 end
