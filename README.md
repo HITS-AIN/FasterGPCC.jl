@@ -7,7 +7,9 @@
 
 ## ℹ What is this?
 
-This is a Julia implementation that speeds up the Gaussian Process Cross Correlation (GPCC) via a heuristic. The original GPCC implementation can be found [here](https://github.com/HITS-AIN/GPCC.jl). 
+This is a Julia implementation that speeds up the Gaussian Process Cross Correlation (GPCC) via a heuristic. 
+
+The original GPCC implementation can be found [here](https://github.com/HITS-AIN/GPCC.jl). 
 
 ## 💾 Installation
 
