@@ -134,7 +134,7 @@ end
 
 
 let
-  idx = [3, 1, 2] #  correspond to wavelengths 9100, 5100, 7700
+  idx = [6, 4, 5] #  correspond to wavelengths 9100, 5100, 7700
 
   tobs, yobs, σobs, lambda, = readdataset(source = "Mgc0811")
   tobs, yobs, σobs = tobs[idx], yobs[idx], σobs[idx]
