@@ -1,6 +1,6 @@
 <h1 align="center">FasterGPCC.jl</h1>
 <p align="center">
-  <img width="253" height="165" src=logo.png>
+  <img width="253" height="165" src=logo_rocket.png>
 </p>
 
 
